@@ -1,0 +1,136 @@
+.care {
+  background-color: var(--background-section-color);
+  width: 100%;
+  position: relative;
+  border-radius: 40px;
+  margin: auto;
+  box-sizing: border-box;
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  &__item {
+    flex: 1 1 300px;
+    max-width: 312px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 37px;
+
+    &--intro {
+      width: 100%;
+      position: relative;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+      border-radius: 40px;
+      background-color: #c75e90;
+      height: 479px;
+    }
+
+    &--service {
+      position: relative;
+    }
+  }
+
+  &__subtitle {
+    width: 100%;
+    color: #181818;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4.32px;
+    text-transform: uppercase;
+    margin-top: 68px;
+    margin-bottom: 19px;
+  }
+
+  &__title {
+    width: 175px;
+    position: relative;
+    font-size: 36px;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  &__service-image{
+    border-radius: 10%;
+ }
+
+  &__description {
+    width: 226px;
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 33px;
+  }
+
+  &__cta {
+    a {
+      background-color: $secondary-color;
+      text-decoration: none;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 220px;
+      width: 236px;
+      height: 45px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      flex-shrink: 0;
+      margin-bottom: 59px;
+
+      svg.right-arrow {
+        margin-left: 17px;
+        margin-right: 43px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #420d26;
+      }
+    }
+  }
+
+  &__service-title {
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+    display: inline-block;
+    color: var(--text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 32px;
+  }
+
+  &__service-description {
+    width: 256px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .care {
+    flex-direction: column;
+  }
+}

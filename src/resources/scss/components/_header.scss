@@ -1,0 +1,184 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-section-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 20px 40px;
+
+  &__logo {
+    width: 188px;
+    height: auto;
+
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: $font-size-small;
+    transition: $transition-standard;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  &__cta-container {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__switcher-container {
+    position: relative;
+    width: 109px;
+    height: 45px;
+  }
+
+  &__theme-toggle {
+    display: none;
+  }
+
+  &__slider {
+    position: relative;
+    width: 109px;
+    height: 45px;
+    background-color: white;
+    border-radius: 220px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &__switch {
+    position: absolute;
+    width: 65px;
+    height: 45px;
+    background-color: $primary-color;
+    border-radius: 220px;
+    left: 0;
+    transition: left 0.3s ease;
+
+    &-mobile {
+      position: absolute;
+      width: 65px;
+      height: 45px;
+      border-radius: 220px;
+      left: 0;
+      transition: left 0.3s ease;
+      background-color: $secondary-color;
+    }
+  }
+
+  &__theme-toggle:not(:checked) + &__slider &__switch {
+    left: 0;
+  }
+
+  &__theme-toggle:not(:checked) + &__slider &__switch-mobile {
+    left: 0;
+  }
+
+
+  &__theme-toggle:not(:checked) + &__slider .header__icon--moon {
+    stroke: white;
+  }
+
+  &__theme-toggle:not(:checked) + &__slider .header__icon--sun {
+    stroke: #161616;
+  }
+
+  &__theme-toggle:checked + &__slider &__switch {
+    left: calc(100% - 65px);
+  }
+
+  &__theme-toggle:checked + &__slider &__switch-mobile {
+    left: calc(100% - 65px);
+  }
+
+  &__theme-toggle:checked + &__slider .header__icon--moon {
+    stroke: #161616;
+  }
+
+  &__theme-toggle:checked + &__slider .header__icon--sun {
+    stroke: white;
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 1;
+    transition: stroke 0.3s ease;
+
+    &--moon {
+      margin-left: 5px;
+      stroke: white;
+    }
+
+    &--sun {
+      margin-right: 5px;
+      stroke: #161616;
+    }
+  }
+
+  &__cta-button {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 220px;
+    padding: 14px 48px;
+    font-size: $font-size-small;
+    font-weight: 700;
+    cursor: pointer;
+    transition: $transition-standard;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: $secondary-color;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+
+    &__navigation {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+    text-align: center;
+    width: auto;
+    height: auto;
+
+    &__cta-button {
+      padding: 12px 24px;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+
+#logo {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}

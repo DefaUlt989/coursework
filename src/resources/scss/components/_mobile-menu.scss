@@ -1,0 +1,125 @@
+.neko-inn-mobile-menu {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    flex-direction: column;
+    color: var(--text-color, #fff);
+    margin: 0 auto;
+    font: 700 32px Poppins, sans-serif;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    z-index: 1000;
+    transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    background-color: var(--mobile-menu-bg, #c75e90);
+
+    &.open {
+        right: 0;
+    }
+}
+
+.menu-container {
+    border-radius: 60px 0 0 60px;
+    background-color: var(--mobile-menu-bg, #c75e90);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 31px 0 88px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 63px;
+    height: 63px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1100;
+
+    &-use {
+        fill: var(--text-color, #fff);
+    }
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.menu-content {
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 32px;
+}
+.menu-item {
+    margin: 36px 0 0 44px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:first-of-type {
+        margin-top: 60px;
+    }
+    &:hover, &:focus {
+        color: $secondary-color;
+
+    }
+}
+
+.book-now-btn {
+    border-radius: 220px;
+    background-color: var(--button-bg, #8e345f);
+    align-self: stretch;
+    margin-top: 144px;
+    font-size: 16px;
+    padding: 21px 70px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 269px;
+    &:hover {
+        background-color: var(--button-hover-bg, #a13d6d);
+        transform: scale(1.05);
+    }
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+    .header__navigation--desktop,
+    .header__cta-container--desktop {
+        display: none;
+    }
+}
+@media (min-width: 1000px) {
+    .menu-toggle,
+    .header__navigation--mobile {
+        display: none;
+    }
+}
+.mobile-theme-switcher {
+
+    align-self: flex-start;
+}
+
+.neko-inn-mobile-menu .logo {
+    width: 159px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    align-self: center;
+}
