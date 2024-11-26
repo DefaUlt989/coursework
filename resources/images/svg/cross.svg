@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 63">
+    <symbol id="cross-icon" viewBox="0 0 63 63">
+        <path class="cross-path" d="M49.875 13.125L13.125 49.875M13.125 13.125L49.8751 49.875"
+              fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>

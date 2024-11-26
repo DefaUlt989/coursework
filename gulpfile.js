@@ -11,7 +11,7 @@ const include = require('gulp-file-include');
 
 let path = {
     build: {
-        html: "templates/",
+        html: "static/",
         css: "static/css/",
         js: "static/js/",
         img: "static/images/",
@@ -26,7 +26,7 @@ let path = {
         fonts: "src/resources/fonts/**/*",
         plugins: "src/modules/plugins/**/*",
     },
-    watch: { // Добавлено
+    watch: {
         html: "src/pages/**/*.html",
         css: "src/resources/scss/**/*.scss",
         js: "src/modules/js/**/*.js",

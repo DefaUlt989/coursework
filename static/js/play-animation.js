@@ -1,1 +1,0 @@
-const toggleIcons=document.querySelectorAll(".icon-toggle");toggleIcons.forEach((e=>{e.addEventListener("click",(()=>{e.classList.toggle("active")}))}));

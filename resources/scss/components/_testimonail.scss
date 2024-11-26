@@ -1,0 +1,219 @@
+.testimonial-section {
+    border-radius: 0;
+    display: flex;
+    padding: 80px 40px; /*24*/
+    flex-direction: column;
+    align-items: center;
+
+    &__subtitle {
+        color: $accent-color;
+        font-size: $font-size-small;
+        font-weight: 700;
+        letter-spacing: 5.04px;
+        text-transform: uppercase;
+        margin-bottom: $padding-standard;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    &__title {
+        font-size: 46px;
+        font-weight: 700;
+        margin-bottom: 28px;
+        margin-top: 23px;
+    }
+
+    &__description {
+        color: var(--text-color);
+        text-align: center;
+        font-family: 'Poppins-Regular', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        max-width: 868px;
+    }
+}
+
+.testimonialSwiper {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 40px;
+    overflow: hidden;
+
+}
+
+.testimonialSwiper-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 50px; 
+}
+
+.swiper-slide.testimonial-card {
+    background-color: var(--background-section-color);
+    border-radius: 40px;
+    padding: 39px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 20px);
+}
+
+.testimonial-content {
+    display: flex;
+    margin-top: 18px;
+    gap: 21px;
+}
+
+.testimonial-text {
+    color: var(--text-color);
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.author-info {
+    display: flex;
+    gap: 18px;
+    margin-top: 26px;
+    align-items: center;
+}
+
+.author-avatar {
+    background-color: #c75e90;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    padding: 4px;
+}
+
+.author-image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 68px;
+    border-radius: 50%;
+    height: 68px;
+}
+
+.author-name {
+    color: var(--text-color);
+    font: 700 16px Poppins, sans-serif;
+    font-size: 16px;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+    background: #c75e90;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+    background-color: #c75e90;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 10;
+    &:hover, &:focus{
+        background-color: var(--secondary-color);
+        transition: background-color 0.3s ease-in-out;
+    }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 20px;
+}
+
+.swiper-button-prev {
+    left: 2%;
+    top: 50%;
+}
+
+.swiper-button-next {
+    right: 2%;
+    top: 50%;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width: 1440px) {
+    .testimonial-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .testimonial-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .testimonialSwiper {
+        padding: 0;
+    }
+
+    .swiper-slide.testimonial-card {
+        padding: 20px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .testimonial-section {
+        padding: 20px;
+        text-align: center;
+        width: auto;
+        height: auto;
+    }
+    .testimonialSwiper-wrapper{
+        padding: 0;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: none;
+    }
+    .testimonial-section__subtitle {
+        font-size: $font-size-small;
+    }
+
+    .testimonial-section__title {
+        font-size: $font-size-large;
+    }
+}
