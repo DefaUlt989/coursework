@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".carousel-item");e.forEach(((e,t)=>{e.classList.remove("active"),0===t&&e.classList.add("active")}))}));
